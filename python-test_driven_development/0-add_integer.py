@@ -1,13 +1,20 @@
 #!/usr/bin/python3
-"""Adds two integers."""
+"""
+Module that defines add_integer function
+"""
 
 
 def add_integer(a, b=98):
-    """Return the addition of a and b as integers."""
-    
-    if type(a) not in [int, float]:
+    """
+    Adds two integers.
+    """
+
+    if type(a) not in (int, float):
         raise TypeError("a must be an integer")
-    if type(b) not in [int, float]:
+    if type(b) not in (int, float):
         raise TypeError("b must be an integer")
 
-    return int(a) + int(b)
+    try:
+        return int(a) + int(b)
+    except OverflowError:
+        raise TypeError("a must be an integer")
