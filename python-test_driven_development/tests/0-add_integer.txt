@@ -18,3 +18,6 @@ TypeError: a must be an integer
 >>> add_integer(1e1000 ** 1e1000)
 Traceback (most recent call last):
 OverflowError: cannot convert float infinity to integer
+>>> add_integer(float("nan"), 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
