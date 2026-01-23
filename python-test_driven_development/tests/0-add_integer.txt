@@ -15,3 +15,6 @@ TypeError: b must be an integer
 >>> add_integer(None)
 Traceback (most recent call last):
 TypeError: a must be an integer
+>>> add_integer(1e1000 ** 1e1000)
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
