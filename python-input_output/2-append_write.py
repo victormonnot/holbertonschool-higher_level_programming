@@ -2,7 +2,7 @@
 """file"""
 
 
-def write_file(filename="", text=""):
-    '''Write a string in a txt file and return the numbers of characters written'''
-    with open(filename, "w", encoding="utf-8") as jsp:
-        return jsp.write(text)
+def append_write(filename="", text=""):
+    '''append a string in the file and retrun the numbers of characters appended'''
+    with open(filename, "a", encoding="utf-8") as f:
+        return f.write(text)
