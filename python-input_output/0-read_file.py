@@ -5,4 +5,4 @@
 def read_file(filename=""):
     """Print what is in a file"""
     with open(filename, "r", encoding="utf-8") as jsp:
-        print(jsp.read())
+        print(jsp.read(), end="")
